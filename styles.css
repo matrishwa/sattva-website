@@ -130,6 +130,13 @@ img {
   align-items: center;
   justify-content: space-between;
   min-height: 80px;
+  gap: 28px;
+}
+
+.logo-with-image {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .logo {
@@ -157,11 +164,27 @@ img {
   font-weight: 600;
 }
 
+.logo-images {
+  display: flex;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 120px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1.5px solid rgba(184, 139, 74, 0.3);
+  box-shadow: 0 6px 12px rgba(29, 63, 48, 0.1);
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
   gap: 32px;
   list-style: none;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .nav-menu a {
@@ -463,16 +486,14 @@ img {
   line-height: 1.8;
 }
 
-.tiffin-content,
-.gifting-options {
+.tiffin-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 28px;
   margin-top: 40px;
 }
 
-.tiffin-column,
-.gifting-column {
+.tiffin-column {
   background: rgba(255, 255, 255, 0.6);
   border: 1.5px solid rgba(184, 139, 74, 0.25);
   border-radius: 24px;
@@ -480,8 +501,7 @@ img {
   box-shadow: 0 12px 30px rgba(34, 39, 30, 0.06);
 }
 
-.tiffin-column h3,
-.gifting-column h3 {
+.tiffin-column h3 {
   color: var(--forest);
   font-size: 1.6rem;
   margin: 0 0 20px;
@@ -524,6 +544,45 @@ img {
 .portion-desc {
   margin: 0;
   color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Service Areas */
+.service-areas {
+  margin-top: 50px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1.5px solid rgba(184, 139, 74, 0.2);
+  border-radius: 24px;
+  padding: 32px 28px;
+}
+
+.service-areas h3 {
+  color: var(--forest);
+  font-size: 1.6rem;
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+
+.service-areas p {
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.areas-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.area-badge {
+  background: linear-gradient(180deg, rgba(184, 139, 74, 0.15), rgba(184, 139, 74, 0.08));
+  border: 1.5px solid rgba(184, 139, 74, 0.3);
+  color: var(--forest);
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-weight: 600;
   font-size: 0.9rem;
 }
 
@@ -661,35 +720,79 @@ img {
   background: linear-gradient(180deg, #f8f5f0, #fefcf9);
 }
 
-.gifting-list {
-  display: grid;
-  gap: 18px;
+.deepawali-collection {
+  margin-top: 40px;
 }
 
-.gifting-item {
-  background: rgba(250, 246, 240, 0.8);
-  border: 1.5px solid rgba(184, 139, 74, 0.22);
-  border-radius: 18px;
-  padding: 22px 20px;
-  transition: all 0.3s ease;
-}
-
-.gifting-item:hover {
-  transform: translateX(6px);
-  box-shadow: 0 8px 20px rgba(29, 63, 48, 0.06);
-}
-
-.gifting-item h4 {
-  margin: 0 0 10px;
+.deepawali-collection h3 {
   color: var(--forest);
-  font-size: 1.22rem;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 0 28px;
   font-weight: 700;
 }
 
-.gifting-item p {
+.deepawali-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.deepawali-item {
+  background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(245,236,224,0.85));
+  border: 1.5px solid rgba(184, 139, 74, 0.25);
+  border-radius: 22px;
+  padding: 30px 22px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(29, 63, 48, 0.05);
+  transition: all 0.3s ease;
+}
+
+.deepawali-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(29, 63, 48, 0.1);
+}
+
+.item-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(184, 139, 74, 0.12);
+  font-size: 2.2rem;
+  border: 2px solid rgba(184, 139, 74, 0.2);
+}
+
+.deepawali-item h4 {
+  margin: 0 0 10px;
+  color: var(--forest);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.deepawali-item p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.97rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.gifting-benefits {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1.5px solid rgba(184, 139, 74, 0.2);
+  border-radius: 24px;
+  padding: 32px 28px;
+}
+
+.gifting-benefits h3 {
+  color: var(--forest);
+  font-size: 1.6rem;
+  margin: 0 0 20px;
+  font-weight: 700;
 }
 
 /* Why Sattva Section */
@@ -780,13 +883,14 @@ img {
 /* Contact Section */
 .contact-content {
   display: grid;
-  grid-template-columns: 1.1fr 1.3fr;
+  grid-template-columns: 1fr;
   gap: 32px;
   align-items: start;
 }
 
 .contact-info {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
 }
 
@@ -815,57 +919,6 @@ img {
 
 .info-block a:hover {
   color: var(--forest);
-}
-
-.contact-form {
-  background: rgba(255,255,255,0.65);
-  border: 1.5px solid rgba(184, 139, 74, 0.25);
-  border-radius: 22px;
-  padding: 32px 28px;
-  box-shadow: 0 12px 30px rgba(29, 63, 48, 0.06);
-}
-
-.contact-form h3 {
-  margin: 0 0 24px;
-  color: var(--forest);
-  font-size: 1.7rem;
-  font-weight: 700;
-}
-
-.form-group {
-  margin-bottom: 18px;
-}
-
-input,
-textarea {
-  width: 100%;
-  border: 1.5px solid rgba(184, 139, 74, 0.25);
-  border-radius: 14px;
-  background: rgba(255,255,255,0.75);
-  padding: 14px 16px;
-  font-size: 1rem;
-  font-family: inherit;
-  color: var(--text);
-  transition: all 0.3s ease;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: var(--muted);
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--gold);
-  background: rgba(255,255,255,0.9);
-  box-shadow: 0 0 0 3px rgba(184, 139, 74, 0.1);
-}
-
-.form-note {
-  margin: 16px 0 0;
-  color: var(--muted);
-  font-size: 0.92rem;
 }
 
 /* Footer */
@@ -924,22 +977,23 @@ textarea:focus {
 @media (max-width: 1024px) {
   .promises-grid,
   .products-grid,
-  .why-grid {
+  .why-grid,
+  .deepawali-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .contact-content {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-content {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+  }
+
+  .nav-container {
+    gap: 12px;
+  }
+
+  .logo-images {
+    display: none;
   }
 
   .nav-menu {
@@ -956,6 +1010,8 @@ textarea:focus {
     border-radius: 18px;
     padding: 16px 18px;
     box-shadow: 0 12px 40px rgba(29, 63, 48, 0.15);
+    flex: none;
+    justify-content: flex-start;
   }
 
   .nav-menu.active {
@@ -976,7 +1032,6 @@ textarea:focus {
   }
 
   .tiffin-content,
-  .gifting-options,
   .contact-content,
   .footer-content {
     grid-template-columns: 1fr;
@@ -985,7 +1040,9 @@ textarea:focus {
   .plans-grid,
   .products-grid,
   .why-grid,
-  .promises-grid {
+  .promises-grid,
+  .deepawali-grid,
+  .contact-info {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1019,7 +1076,10 @@ textarea:focus {
 @media (max-width: 480px) {
   .promises-grid,
   .products-grid,
-  .why-grid {
+  .why-grid,
+  .deepawali-grid,
+  .plans-grid,
+  .contact-info {
     grid-template-columns: 1fr;
   }
 
@@ -1035,22 +1095,11 @@ textarea:focus {
     padding: 28px 18px;
   }
 
-  .tiffin-column,
-  .gifting-column {
+  .tiffin-column {
     padding: 24px 18px;
-  }
-
-  .contact-form,
-  .info-block {
-    padding: 20px 16px;
   }
 
   .cta-section h2 {
     font-size: 2rem;
-  }
-
-  input,
-  textarea {
-    padding: 12px 14px;
   }
 }
